@@ -1,0 +1,27 @@
+﻿@model Yako.Infrastructure.Entities.Category
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Kategori Ekle";
+}
+
+
+
+<h2>Yeni Kategori Ekle</h2>
+
+<form method="post" asp-area="Admin" asp-controller="Category" asp-action="Create">
+    @Html.AntiForgeryToken()
+
+    <div class="mb-3">
+        <label class="form-label">Kategori Adı</label>
+        <input type="text" name="Name" value="@Model?.Name" class="form-control" />
+        <span class="text-danger">
+            @Html.ValidationMessage("Name", "", new { @class = "text-danger" })
+        </span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
+
+
+

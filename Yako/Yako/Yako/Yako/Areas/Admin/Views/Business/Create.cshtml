@@ -1,0 +1,69 @@
+﻿@using Yako.UI.Areas.Admin.Models
+@model BusinessCreateDto
+
+@{
+    ViewData["Title"] = "İşletme Ekle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    var categories = ViewBag.Categories as List<Yako.Infrastructure.Entities.Category>;
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">İşletme Ekle</h2>
+
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="Title" class="form-label">Başlık</label>
+                <input name="Title" id="Title" value="@Model?.Title" class="form-control" />
+                <span class="text-danger" data-valmsg-for="Title" data-valmsg-replace="true"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label for="Address" class="form-label">Adres</label>
+                <input name="Address" id="Address" value="@Model?.Address" class="form-control" />
+                <span class="text-danger" data-valmsg-for="Address" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="Description" class="form-label">Açıklama</label>
+            <textarea name="Description" id="Description" class="form-control" rows="3">@Model?.Description</textarea>
+            <span class="text-danger" data-valmsg-for="Description" data-valmsg-replace="true"></span>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="Location" class="form-label">Konum</label>
+                <input name="Location" id="Location" value="@Model?.Location" class="form-control" />
+                <span class="text-danger" data-valmsg-for="Location" data-valmsg-replace="true"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label for="MapUrl" class="form-label">Harita URL</label>
+                <input name="MapUrl" id="MapUrl" value="@Model?.MapUrl" class="form-control" />
+                <span class="text-danger" data-valmsg-for="MapUrl" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="Image" class="form-label">Görsel Yükle</label>
+            <input name="Image" id="Image" type="file" class="form-control" />
+            <span class="text-danger" data-valmsg-for="Image" data-valmsg-replace="true"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="CategoryId" class="form-label">Kategori</label>
+            <select name="CategoryId" id="CategoryId" class="form-select">
+                <option disabled selected>Seçiniz</option>
+                @foreach (var cat in categories)
+                {
+                    <option value="@cat.Id" @(cat.Id == Model?.CategoryId ? "selected" : "")>@cat.Name</option>
+                }
+            </select>
+            <span class="text-danger" data-valmsg-for="CategoryId" data-valmsg-replace="true"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success">Kaydet</button>
+        <a href="/Admin/Business" class="btn btn-secondary ms-2">Geri Dön</a>
+    </form>
+</div>

@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <title>Anasayfa</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">YAKO</div>
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul class="menu" id="menu">
+            <li><a href="/Home/Index">Anasayfa</a></li>
+            <li><a href="/Home/Privacy">Hakkımızda</a></li>
+            <li><a href="/BusinessFind/Index">İşletme Ara</a></li>
+            <li><a href="/Contact/Index">İletişim</a></li>
+            @if (User.Identity.IsAuthenticated && !User.IsInRole("Admin"))
+            {
+                <li><a href="/Message/Index">Mesajların</a></li>
+            }
+
+            @if (User.Identity.IsAuthenticated)
+            {
+                if (User.IsInRole("Admin"))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="Admin" asp-controller="AdminContact" asp-action="Index">Admin Paneli</a>
+                    </li>
+                }
+
+                <li class="nav-item">
+                    <form asp-controller="Account" asp-action="Logout" method="post" class="form-inline">
+                        <button type="submit" class="btn btn-link nav-link text-dark">Logout</button>
+                    </form>
+                </li>
+            }
+            else
+            {
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Login</a>
+                </li>
+            }
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Sol Kolon: Logo -->
+            <div class="footer-logo">
+                <span>Rehberiniz</span>
+            </div>
+
+            <!-- Ortadaki Kolonlar -->
+            <div class="footer-columns">
+                <!-- Sayfalar -->
+                <div class="footer-column">
+                    <h3>Sayfalar</h3>
+                    <ul>
+                        <li><a href="#">Anasayfa</a></li>
+                        <li><a href="#">Hakkımızda</a></li>
+                        <li><a href="#">İşletme Ara</a></li>
+                    </ul>
+                </div>
+                <!-- Popüler Aramalar -->
+                <div class="footer-column">
+                    <h3>Popüler Aramalar</h3>
+                    <ul>
+                        <li><a href="#">Restoranlar</a></li>
+                        <li><a href="#">Oteller</a></li>
+                        <li><a href="#">Cafeler</a></li>
+                        <li><a href="#">Müzeler</a></li>
+                        <li><a href="#">AVM</a></li>
+                    </ul>
+                </div>
+                <!-- İletişim ve Gizlilik -->
+                <div class="footer-column">
+                    <h3>İletişim & Gizlilik</h3>
+                    <ul>
+                        <li><a href="#">İletişim</a></li>
+                        <li><a href="#">Gizlilik Politikası</a></li>
+                        <li><a href="#">Kullanım Şartları</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sağ Kolon: Sosyal Medya İkonları -->
+            <div class="footer-social">
+                <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+
+        <!-- Footer Alt Kısım: Telif Hakkı -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+</body>
+<script src="~/js/hamburgermenu.js"></script>
+</html>

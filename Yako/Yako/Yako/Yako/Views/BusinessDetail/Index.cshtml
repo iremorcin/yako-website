@@ -1,0 +1,184 @@
+﻿@model Yako.Infrastructure.Entities.Business
+
+<link rel="stylesheet" href="~/css/site.css">
+<link rel="stylesheet" href="~/css/detail.css">
+
+@{
+    ViewData["Title"] = Model.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-warning">
+        @TempData["Error"]
+    </div>
+}
+
+<div class="main-image-container">
+    <img id="mainImage" src="@Url.Content(Model.ImageUrl)" alt="@Model.Title" />
+</div>
+
+<!-- Küçük Resimler -->
+<div class="thumbnails">
+    <!-- Burada istersen gerçek iş yeri resimleri dönebilirsin, örnek olarak sabit resimler koydum -->
+    <img class="thumbnail" src="@Url.Content(Model.ImageUrl)" alt="Yan Resim 1" onclick="changeImage(this)" />
+    <img class="thumbnail" src="@Url.Content(Model.ImageUrl)" alt="Yan Resim 2" onclick="changeImage(this)" />
+    <img class="thumbnail" src="@Url.Content(Model.ImageUrl)" alt="Yan Resim 3" onclick="changeImage(this)" />
+    <img class="thumbnail" src="@Url.Content(Model.ImageUrl)" alt="Yan Resim 4" onclick="changeImage(this)" />
+</div>
+
+<!-- İçerik -->
+<div class="content-section">
+    <h1>@Model.Title</h1>
+    <p>
+        @Model.Description
+    </p>
+</div>
+
+@if (Model.AverageRating.HasValue)
+{
+    var avg = Model.AverageRating.Value;
+    string comment = avg switch
+    {
+        var x when x >= 4.5 => "Yapay zeka Notu : Mükemmel! Harika bir deneyim.",
+        var x when x >= 4.0 => "Yapay zeka Notu : Çok iyi! Memnuniyet yüksek.",
+        var x when x >= 3.0 => "Yapay zeka Notu : Orta düzeyde. İyileştirilebilir.",
+        var x when x >= 2.0 => "Yapay zeka Notu : Düşük puan, geliştirilmesi gerekiyor.",
+        _ => "Yapay zeka Notu : Maalesef, pek memnun kalınmamış."
+    };
+    <section class="average-rating-section enhanced-rating-box">
+        <div class="rating-title">
+            <h2>Ortalama Puan</h2>
+        </div>
+        <div class="rating-display">
+            <div class="stars">
+                @{
+                    var rounded = Math.Round(avg);
+                    for (int i = 1; i <= 5; i++)
+                    {
+                        if (i <= rounded)
+                        {
+                            @:<span class="star selected">&#9733;</span>
+                        }
+                        else
+                        {
+                            @:<span class="star">&#9733;</span>
+                        }
+                    }
+                }
+            </div>
+            <div class="rating-value">
+                @avg.ToString("0.0") / 5
+            </div>
+        </div>
+        <div class="rating-comment">
+            <em>@comment</em>
+        </div>
+    </section>
+}
+
+<section class="rating-section">
+    <h2>Oyla</h2>
+
+    <form asp-action="RateBusiness" method="post" id="ratingForm">
+        <input type="hidden" name="BusinessId" value="@Model.Id" />
+        <input type="hidden" name="Rating" id="selectedRating" />
+
+        <div class="star-rating">
+            @for (int i = 1; i <= 5; i++)
+            {
+                <span class="star" data-value="@i">&#9733;</span>
+            }
+        </div>
+
+        <button type="submit">Gönder</button>
+    </form>
+</section>
+
+<!-- Konum Bilgisi Bölümü -->
+<section class="location-section">
+    <h2>Konum</h2>
+
+    <div class="location-info">
+        <p><strong>Adres:</strong> @Model.Address</p>
+        <iframe src="@Model.MapUrl"
+                width="100%"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+
+<!-- Yorumlar Bölümü -->
+<section class="reviews-section">
+    <h2>Yorumlar</h2>
+
+    <div class="review">
+        <div class="review-header">
+            <strong>Ayşe Yıldız (İyi Yorum)</strong>
+            <span class="stars">★★★★☆</span>
+        </div>
+        <p>Mekan çok temizdi ve garsonlar çok ilgiliydi. Yemekler biraz geç geldi ama lezzet harikaydı.</p>
+    </div>
+
+    <div class="review">
+        <div class="review-header">
+            <strong>Mehmet Demir (Nötr Yorum)</strong>
+            <span class="stars">★★★☆☆</span>
+        </div>
+        <p>Fiyatlar biraz yüksekti ama ortam çok keyifliydi. Tatlıları özellikle tavsiye ederim.</p>
+    </div>
+
+    <div class="review">
+        <div class="review-header">
+            <strong>Selin K. (Çok İyi Yorum)</strong>
+            <span class="stars">★★★★★</span>
+        </div>
+        <p>Her şey mükemmeldi! Özellikle pizza gerçekten inanılmazdı. Tekrar geleceğim.</p>
+    </div>
+</section>
+
+<!-- Küçük JS -->
+<script>
+    function changeImage(thumbnail) {
+        const mainImage = document.getElementById('mainImage');
+        mainImage.src = thumbnail.src;
+    }
+</script>
+
+<script>
+    const stars = document.querySelectorAll('.star');
+    const ratingInput = document.getElementById('selectedRating');
+    let selectedValue = 0;
+
+    stars.forEach(star => {
+        star.addEventListener('mouseover', () => {
+            const value = parseInt(star.getAttribute('data-value'));
+            highlightStars(value);
+        });
+
+        star.addEventListener('mouseout', () => {
+            highlightStars(selectedValue);
+        });
+
+        star.addEventListener('click', () => {
+            selectedValue = parseInt(star.getAttribute('data-value'));
+            ratingInput.value = selectedValue;
+            highlightStars(selectedValue);
+        });
+    });
+
+    function highlightStars(value) {
+        stars.forEach(star => {
+            const starValue = parseInt(star.getAttribute('data-value'));
+            star.classList.toggle('selected', starValue <= value);
+        });
+    }
+</script>
+
+<!-- ⭐ CSS -->
+

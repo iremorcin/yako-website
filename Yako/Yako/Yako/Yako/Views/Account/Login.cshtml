@@ -1,0 +1,50 @@
+﻿@model Yako.UI.Models.LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/css/signinup.css" />
+
+<section class="login-form">
+    <div class="card">
+        <h1>Giriş Yap</h1>
+
+        <form asp-action="Login" asp-controller="Account" method="post">
+            @Html.AntiForgeryToken()
+
+            <div class="input-group">
+                <div class="username-email-input">
+                    <div class="input-box">
+                        <input asp-for="UserName" class="input" placeholder=" " />
+                        <label asp-for="UserName" class="input-label">Kullanıcı Adı</label>
+                    </div>
+                    <span>
+                        <p class="mark">!</p>
+                        <p class="error-text">@Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })</p>
+                    </span>
+                </div>
+
+                <div class="password-input">
+                    <div class="input-box">
+                        <input asp-for="Password" type="password" class="input" placeholder=" " />
+                        <label asp-for="Password" class="input-label">Şifre</label>
+                    </div>
+                    <span>
+                        <p class="mark">!</p>
+                        <p class="error-text">@Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })</p>
+                    </span>
+                </div>
+            </div>
+
+            <button type="submit" id="login_submit" class="btn">GİRİŞ YAP</button>
+        </form>
+    </div>
+
+    <div class="under-card">
+        <p>Hesabın yok mu?</p>
+        <a asp-action="Register" asp-controller="Account">
+            <button type="button" id="to_signup">Kayıt Ol</button>
+        </a>
+    </div>
+</section>

@@ -1,0 +1,57 @@
+﻿@using Yako.UI.Models
+@model ContactModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/site.css" />
+
+<section class="contact-section">
+    <h2>İletişim</h2>
+    <p>Her türlü soru, öneri veya geri bildiriminiz için bizimle iletişime geçin.</p>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="custom-alert success">
+            <div class="icon">✔</div>
+            <div class="message">@TempData["Success"]</div>
+            <button class="close-btn" aria-label="Kapat" onclick="this.parentElement.style.opacity='0'; setTimeout(() => this.parentElement.remove(), 500);">&times;</button>
+        </div>
+    }
+
+    <form asp-action="Index" asp-controller="Contact" method="post" class="contact-form">
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <label asp-for="Name">Ad Soyad</label>
+            <input asp-for="Name" placeholder="Adınızı girin" class="form-control" />
+            <span class="text-danger">@Html.ValidationMessageFor(m => m.Name)</span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Email">E-Posta</label>
+            <input asp-for="Email" placeholder="E-posta adresiniz" class="form-control" />
+            <span class="text-danger">@Html.ValidationMessageFor(m => m.Email)</span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Message">Mesajınız</label>
+            <textarea asp-for="Message" rows="5" placeholder="Mesajınızı yazın" class="form-control"></textarea>
+            <span class="text-danger">@Html.ValidationMessageFor(m => m.Message)</span>
+        </div>
+
+        <button type="submit">Gönder</button>
+    </form>
+</section>
+
+<script>
+    setTimeout(() => {
+        const alert = document.querySelector(".custom-alert");
+        if (alert) {
+            alert.style.transition = "opacity 0.5s ease";
+            alert.style.opacity = "0";
+            setTimeout(() => alert.remove(), 500);
+        }
+    }, 4500); 
+</script>

@@ -1,0 +1,99 @@
+﻿@model Yako.UI.Models.BusinessSearchModel
+
+<section class="hero">
+    <h2>Yakınındaki İşletmeleri Keşfet</h2>
+    <p>Restoran, kafe, sinema ve daha fazlası sadece bir tık uzağında!</p>
+
+    <!-- Arama formu -->
+    <form asp-action="Index" method="post" class="search-box">
+        <input asp-for="Location" placeholder="Konum gir (örn: İstanbul)" />
+        <input asp-for="Category" placeholder="Kategori gir (örn: Restoran)" />
+        <button class="anasayfa-submit" type="submit">Ara</button>
+    </form>
+</section>
+
+<!-- Kategoriler bölümü -->
+<section class="categories">
+    <h3>Popüler Kategoriler</h3>
+    <div class="category-list">
+        <div class="category-item"><a href="">Restoranlar</a></div>
+        <div class="category-item"><a href="">Oteller</a></div>
+        <div class="category-item"><a href="">Kafeler</a></div>
+        <div class="category-item"><a href="">AVM'ler</a></div>
+        <div class="category-item"><a href="">Marketler</a></div>
+        <div class="category-item"><a href="">Müzeler</a></div>
+        <div class="category-item"><a href="">Daha Fazlası</a></div>
+    </div>
+
+    @if (ViewData["SearchResults"] != null)
+    {
+        var results = (List<Yako.Infrastructure.Entities.Business>)ViewData["SearchResults"];
+
+        <section class="search-results" style="margin-top: 40px;">
+            <h3>Arama Sonuçları (@results.Count)</h3>
+            @if (results.Count == 0)
+            {
+                <p>Aradığınız kriterlere uygun işletme bulunamadı.</p>
+            }
+            else
+            {
+                <div class="business-list" >
+                    @foreach (var business in results)
+                    {
+                        <div class="business-card" >
+                            <img src="@Url.Content(business.ImageUrl)" alt="@business.Title" class="card-image">
+                            <div class="card-content" >
+                                <div class="card-title"> </div>
+                                <div class="card-rating" >
+                                    @for (int i = 1; i <= 5; i++)
+                                    {
+                                        if (business.AverageRating.HasValue && i <= Math.Round(business.AverageRating.Value))
+                                        {
+                                            @:⭐
+                                        }
+                                        else
+                                        {
+                                            @:☆
+                                        }
+                                    }
+                                    <span> (@(business.AverageRating.HasValue ? (int)(business.AverageRating.Value * 67) : 0)) Değerlendirme</span>
+                                </div>
+                                <div class="card-desc">
+                                    @if (!string.IsNullOrEmpty(business.Description))
+                                    {
+                                        @(business.Description.Length > 120 ? business.Description.Substring(0, 120) + "..." : business.Description)
+                                    }
+                                </div>
+                                <a href="@Url.Action("Index", "BusinessDetail", new { id = business.Id })" class="details-button">Detaylar</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </section>
+    }
+</section>
+
+<!-- Blog bölümü -->
+<section class="blog">
+    <div class="blog-item">
+        <img src="~/img/restaurant-interior.jpg" alt="Blog Resmi" class="blog-image-left">
+        <div class="blog-content">
+            <h3>Teknoloji Dünyasında Yenilikler</h3>
+            <p>
+                Teknoloji her geçen gün gelişiyor ve yenilikler bizi şaşırtıyor. Günümüzde her şey hızla değişiyor ama yerel işletmeler hâlâ hayatımızın en önemli parçalarından biri.
+                İster yeni bir kafe arıyor ol, ister güvendiğin bir kuaför, ister en yakın marketi bulmak istiyor ol — hepsi artık parmaklarının ucunda!
+            </p>
+        </div>
+    </div>
+    <div class="blog-item reverse">
+        <div class="blog-content">
+            <h3>Yeni Nesil Tasarımlar</h3>
+            <p>
+                Günümüzün teknolojik yenilikleri, tasarımlarımızı yeniden şekillendiriyor. Bu yazıda, modern tasarımların nasıl şekillendiğine göz atıyoruz.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+        </div>
+        <img src="~/img/woman-watching-statues.jpg" alt="Blog Resmi" class="blog-image-right">
+    </div>
+</section>

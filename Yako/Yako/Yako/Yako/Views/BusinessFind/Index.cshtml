@@ -1,0 +1,51 @@
+﻿@using Yako.UI.Models
+@model BusinessIndexViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="hero">
+    <h2>Yakınındaki İşletmeleri Keşfet</h2>
+    <p>Restoran, kafe, sinema ve daha fazlası sadece bir tık uzağında!</p>
+
+    <!-- Arama formu -->
+    <form asp-action="Index" method="post" class="search-box">
+        <input asp-for="Location" placeholder="Konum gir (örn: İstanbul)" />
+        <input asp-for="Category" placeholder="Kategori gir (örn: Restoran)" />
+        <button class="anasayfa-submit" type="submit">Ara</button>
+    </form>
+</section>
+
+<div class="find-title">
+    <h2 class="section-title">Yakındaki İşletmeler</h2>
+</div>
+
+<section class="business-list">
+    @if (Model.Businesses != null && Model.Businesses.Any())
+    {
+        foreach (var business in Model.Businesses)
+        {
+             <div class="business-card">
+                <img src="@Url.Content(business.ImageUrl)" alt="@business.Title" class="card-image" />
+                <div class="card-content">
+                    <div class="card-title">@business.Title</div>
+                    <div class="card-rating">
+                        @{
+                            var starsFull = (int)(business.AverageRating ?? 0);
+                            var starsEmpty = 5 - starsFull;
+                        }
+        
+                    </div>
+                    <div class="card-desc">@business.Description</div>
+                    <a href="@Url.Action("Index", "BusinessDetail", new { id = business.Id })" class="details-button">Detaylar</a>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p>İşletme bulunamadı.</p>
+    }
+</section>
+

@@ -1,0 +1,265 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9221418A-95C9-4AC7-B8C4-711DA52879E7}|Yako.Infrastructure\\Yako.Infrastructure.csproj|c:\\users\\user\\onedrive\\masa\u00FCst\u00FC\\yako\\yako\\yako\\yako.infrastructure\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9221418A-95C9-4AC7-B8C4-711DA52879E7}|Yako.Infrastructure\\Yako.Infrastructure.csproj|solutionrelative:yako.infrastructure\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|c:\\users\\user\\onedrive\\masa\u00FCst\u00FC\\yako\\yako\\yako\\yako\\areas\\admin\\controllers\\businesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|solutionrelative:yako\\areas\\admin\\controllers\\businesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9221418A-95C9-4AC7-B8C4-711DA52879E7}|Yako.Infrastructure\\Yako.Infrastructure.csproj|c:\\users\\user\\onedrive\\masa\u00FCst\u00FC\\yako\\yako\\yako\\yako.infrastructure\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9221418A-95C9-4AC7-B8C4-711DA52879E7}|Yako.Infrastructure\\Yako.Infrastructure.csproj|solutionrelative:yako.infrastructure\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|c:\\users\\user\\onedrive\\masa\u00FCst\u00FC\\yako\\yako\\yako\\yako\\areas\\admin\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|solutionrelative:yako\\areas\\admin\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9221418A-95C9-4AC7-B8C4-711DA52879E7}|Yako.Infrastructure\\Yako.Infrastructure.csproj|c:\\users\\user\\onedrive\\masa\u00FCst\u00FC\\yako\\yako\\yako\\yako.infrastructure\\migrations\\20250617143117_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9221418A-95C9-4AC7-B8C4-711DA52879E7}|Yako.Infrastructure\\Yako.Infrastructure.csproj|solutionrelative:yako.infrastructure\\migrations\\20250617143117_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|c:\\users\\user\\onedrive\\masa\u00FCst\u00FC\\yako\\yako\\yako\\yako\\areas\\admin\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|solutionrelative:yako\\areas\\admin\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|c:\\users\\user\\onedrive\\masa\u00FCst\u00FC\\yako\\yako\\yako\\yako\\areas\\admin\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|solutionrelative:yako\\areas\\admin\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|c:\\users\\user\\onedrive\\masa\u00FCst\u00FC\\yako\\yako\\yako\\yako\\areas\\admin\\views\\business\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|solutionrelative:yako\\areas\\admin\\views\\business\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|c:\\users\\user\\onedrive\\masa\u00FCst\u00FC\\yako\\yako\\yako\\yako\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|solutionrelative:yako\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|c:\\users\\user\\onedrive\\masa\u00FCst\u00FC\\yako\\yako\\yako\\yako\\areas\\admin\\views\\business\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|solutionrelative:yako\\areas\\admin\\views\\business\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|c:\\users\\user\\onedrive\\masa\u00FCst\u00FC\\yako\\yako\\yako\\yako\\areas\\admin\\controllers\\admincontactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|solutionrelative:yako\\areas\\admin\\controllers\\admincontactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|c:\\users\\user\\onedrive\\masa\u00FCst\u00FC\\yako\\yako\\yako\\yako\\areas\\admin\\views\\business\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|solutionrelative:yako\\areas\\admin\\views\\business\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|c:\\users\\user\\onedrive\\masa\u00FCst\u00FC\\yako\\yako\\yako\\yako\\areas\\admin\\models\\businesscreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|solutionrelative:yako\\areas\\admin\\models\\businesscreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9221418A-95C9-4AC7-B8C4-711DA52879E7}|Yako.Infrastructure\\Yako.Infrastructure.csproj|c:\\users\\user\\onedrive\\masa\u00FCst\u00FC\\yako\\yako\\yako\\yako.infrastructure\\entities\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9221418A-95C9-4AC7-B8C4-711DA52879E7}|Yako.Infrastructure\\Yako.Infrastructure.csproj|solutionrelative:yako.infrastructure\\entities\\business.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|c:\\users\\user\\onedrive\\masa\u00FCst\u00FC\\yako\\yako\\yako\\yako\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{394FB123-E0CF-4596-AD83-84D14A00A581}|Yako\\Yako.UI.csproj|solutionrelative:yako\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako.Infrastructure\\DataContext.cs",
+              "RelativeDocumentMoniker": "Yako.Infrastructure\\DataContext.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako.Infrastructure\\DataContext.cs",
+              "RelativeToolTip": "Yako.Infrastructure\\DataContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T14:54:18.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20250617143117_init.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako.Infrastructure\\Migrations\\20250617143117_init.cs",
+              "RelativeDocumentMoniker": "Yako.Infrastructure\\Migrations\\20250617143117_init.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako.Infrastructure\\Migrations\\20250617143117_init.cs",
+              "RelativeToolTip": "Yako.Infrastructure\\Migrations\\20250617143117_init.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T14:31:17.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Areas\\Admin\\Views\\Category\\Create.cshtml",
+              "RelativeDocumentMoniker": "Yako\\Areas\\Admin\\Views\\Category\\Create.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Areas\\Admin\\Views\\Category\\Create.cshtml",
+              "RelativeToolTip": "Yako\\Areas\\Admin\\Views\\Category\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-11T12:51:09.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Areas\\Admin\\Views\\Category\\Index.cshtml",
+              "RelativeDocumentMoniker": "Yako\\Areas\\Admin\\Views\\Category\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Areas\\Admin\\Views\\Category\\Index.cshtml",
+              "RelativeToolTip": "Yako\\Areas\\Admin\\Views\\Category\\Index.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-11T12:49:45.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "Yako\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "Yako\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAuwDQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T12:47:55.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako.Infrastructure\\Entities\\Category.cs",
+              "RelativeDocumentMoniker": "Yako.Infrastructure\\Entities\\Category.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako.Infrastructure\\Entities\\Category.cs",
+              "RelativeToolTip": "Yako.Infrastructure\\Entities\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T12:47:13.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Areas\\Admin\\Views\\Business\\Index.cshtml",
+              "RelativeDocumentMoniker": "Yako\\Areas\\Admin\\Views\\Business\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Areas\\Admin\\Views\\Business\\Index.cshtml",
+              "RelativeToolTip": "Yako\\Areas\\Admin\\Views\\Business\\Index.cshtml",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAACEAAACPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-11T11:57:00.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Yako\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Yako\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowC8AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-11T11:52:09.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Areas\\Admin\\Views\\Business\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Yako\\Areas\\Admin\\Views\\Business\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Areas\\Admin\\Views\\Business\\Edit.cshtml",
+              "RelativeToolTip": "Yako\\Areas\\Admin\\Views\\Business\\Edit.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowDkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-11T11:51:38.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AdminContactController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Areas\\Admin\\Controllers\\AdminContactController.cs",
+              "RelativeDocumentMoniker": "Yako\\Areas\\Admin\\Controllers\\AdminContactController.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Areas\\Admin\\Controllers\\AdminContactController.cs",
+              "RelativeToolTip": "Yako\\Areas\\Admin\\Controllers\\AdminContactController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T11:34:57.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Areas\\Admin\\Views\\Business\\Create.cshtml",
+              "RelativeDocumentMoniker": "Yako\\Areas\\Admin\\Views\\Business\\Create.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Areas\\Admin\\Views\\Business\\Create.cshtml",
+              "RelativeToolTip": "Yako\\Areas\\Admin\\Views\\Business\\Create.cshtml",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAowEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-11T11:48:36.85Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BusinessController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Areas\\Admin\\Controllers\\BusinessController.cs",
+              "RelativeDocumentMoniker": "Yako\\Areas\\Admin\\Controllers\\BusinessController.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Areas\\Admin\\Controllers\\BusinessController.cs",
+              "RelativeToolTip": "Yako\\Areas\\Admin\\Controllers\\BusinessController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJMAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T11:46:09.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BusinessCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Areas\\Admin\\Models\\BusinessCreateDto.cs",
+              "RelativeDocumentMoniker": "Yako\\Areas\\Admin\\Models\\BusinessCreateDto.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Areas\\Admin\\Models\\BusinessCreateDto.cs",
+              "RelativeToolTip": "Yako\\Areas\\Admin\\Models\\BusinessCreateDto.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T12:09:51.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Business.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako.Infrastructure\\Entities\\Business.cs",
+              "RelativeDocumentMoniker": "Yako.Infrastructure\\Entities\\Business.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako.Infrastructure\\Entities\\Business.cs",
+              "RelativeToolTip": "Yako.Infrastructure\\Entities\\Business.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAuwBQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T11:45:04.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Yako\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Masa\u00FCst\u00FC\\Yako\\Yako\\Yako\\Yako\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Yako\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowBwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-11T11:31:24.144Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+﻿@using Yako.Infrastructure.Entities
+@model List<Message>
+
+@{
+    ViewData["Title"] = "Gelen Mesajlar";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<div class="container mt-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">📬 Gelen Mesajlar</h4>
+        </div>
+        <div class="card-body">
+            @if (Model != null && Model.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>👤 Ad Soyad</th>
+                                <th>📧 Email</th>
+                                <th>💬 Mesaj</th>
+                                <th>✉️ İşlem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var msg in Model)
+                            {
+                                <tr>
+                                    <td>@msg.FullName</td>
+                                    <td>@msg.Email</td>
+                                    <td>@msg.Content</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#replyModal-@msg.Id">
+                                            Yanıtla
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="replyModal-@msg.Id" tabindex="-1" aria-labelledby="replyModalLabel-@msg.Id" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <form action="/Admin/AdminContact/Reply" method="post">
+                                                        @Html.AntiForgeryToken()
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="replyModalLabel-@msg.Id">Yanıtla: @msg.FullName</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <input type="hidden" name="OriginalId" value="@msg.Id" />
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Alıcı Email</label>
+                                                                <input type="email" class="form-control" name="Email" value="@msg.Email" readonly />
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Yanıt İçeriği</label>
+                                                                <textarea name="Content" class="form-control" rows="4" required></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="submit" class="btn btn-primary">Gönder</button>
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info">
+                    Şu anda görüntülenecek bir mesaj bulunmamaktadır.
+                </div>
+            }
+        </div>
+    </div>
+</div>
